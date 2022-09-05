@@ -2,39 +2,21 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// in past
-// const React = require('react');
 
-// getButtonText = ()=>{
-//   return "Cick On me!";
-// }
-function getButtonText(){
-  return "Click On me!";
+const getTime = ()=>{
+  return (new Date().toLocaleTimeString())
 }
-
 
 
 // Create a react component
 const App = ()=>{
-  // const buttonText = "Click Me!"
-  // const buttonText = ["Pakistan", "Zindabad"]
-  const buttonText = {text: "Hi There!"}
-  const style = {backgroundColor: "blue", color: "white"}
-  const labelText = "Enter Your Name:";
-  return (
-    <div>
-    <label className="label" htmlFor="name">{labelText}</label>
-    <input id="name" type="text"/>
-    <button style={style}>
+ 
+  return(<div>
+    <div>Current Time:</div>
+    <h3>{getTime()}</h3>
+  </div>)
   
-    {/* {buttonText} */}
-    {buttonText.text}
-    {/* {getButtonText()} */}
-    </button>
-    </div>
-  )
 }
-
 
 
 // Take the react component and show it on the screen
